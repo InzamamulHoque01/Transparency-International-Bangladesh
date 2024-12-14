@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.tibproject.Goal2">
+   <children>
+      <Label layoutX="24.0" layoutY="66.0" text="Start Date:" />
+      <DatePicker fx:id="startDatePicker" layoutX="88.0" layoutY="62.0" />
+      <Button layoutX="216.0" layoutY="125.0" mnemonicParsing="false" onAction="#generateButtonOnAction" prefHeight="26.0" prefWidth="146.0" text="Generate" />
+      <Label layoutX="327.0" layoutY="66.0" text="End Date:" />
+      <DatePicker fx:id="endDatepicker" layoutX="398.0" layoutY="62.0" />
+      <Label layoutX="52.0" layoutY="193.0" prefHeight="46.0" prefWidth="97.0" text="TimeLine Status:" />
+      <ComboBox fx:id="timelineStatusComboBox" layoutX="188.0" layoutY="203.0" prefWidth="150.0" />
+      <Button layoutX="459.0" layoutY="180.0" mnemonicParsing="false" onAction="#submitButtonOnAction" text="Submit" />
+      <TextArea fx:id="resultTextArea" layoutX="101.0" layoutY="239.0" prefHeight="152.0" prefWidth="422.0" text="Result" />
+   </children>
+</AnchorPane>
