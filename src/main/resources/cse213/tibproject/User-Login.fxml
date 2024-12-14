@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="406.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.tibproject.controllers.LoginController">
+    <TextField fx:id="usernameField" layoutX="99.0" layoutY="158.0" promptText="Username" />
+    <PasswordField fx:id="passwordField" layoutX="99.0" layoutY="200.0" promptText="Password" />
+    <Button layoutX="99.0" layoutY="250.0" onAction="#login" text="Login" />
+    <Button layoutX="158.0" layoutY="250.0" onAction="#switchToRegister" text="Register" />
+    <Label fx:id="errorLabel" layoutX="200" layoutY="300" textFill="RED" />
+    
+    <!-- User 7 Goals -->
+    <Text layoutX="568.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User 7" />
+    <Button layoutX="518.0" layoutY="66.0" mnemonicParsing="false" onAction="#Goal1" text="Goal 1" />
+    <Button layoutX="592.0" layoutY="66.0" mnemonicParsing="false" onAction="#Goal2" text="Goal 2" />
+    <Button layoutX="518.0" layoutY="112.0" mnemonicParsing="false" onAction="#Goal3" text="Goal 3" />
+    <Button layoutX="592.0" layoutY="112.0" mnemonicParsing="false" onAction="#Goal4" text="Goal 4" />
+    <Button layoutX="518.0" layoutY="158.0" mnemonicParsing="false" onAction="#Goal5" text="Goal 5" />
+    <Button layoutX="592.0" layoutY="158.0" mnemonicParsing="false" onAction="#Goal6" text="Goal 6" textFill="#e41111" />
+    <Button layoutX="518.0" layoutY="204.0" mnemonicParsing="false" onAction="#Goal7" text="Goal 7" textFill="RED" />
+    <Button layoutX="592.0" layoutY="204.0" mnemonicParsing="false" onAction="#Goal8" text="Goal 8" textFill="#ff0404" />
+    
+    <!-- User 8 Goals -->
+    <Text layoutX="575.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User 8" />
+    <Button layoutX="518.0" layoutY="263.0" mnemonicParsing="false" onAction="#Goal1U8" text="Goal 1" textFill="#f20000" />
+    
+    <Text layoutX="88.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aiman Saad Hamid Project" />
+    <Text layoutX="503.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inzamul Hoque Rafi Project" />
+    <Text layoutX="111.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CommunityAsh" wrappingWidth="95.5172119140625" />
+    <Text layoutX="111.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LawyerAsh" wrappingWidth="79.50274658203125" />
+    <Text layoutX="216.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1234" />
+    <Text layoutX="48.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" />
+    <Text layoutX="217.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pass" />
+   <Separator layoutX="336.0" layoutY="27.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="14.0" />
+   <Separator layoutX="364.0" layoutY="27.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="14.0" />
+   <Separator layoutX="350.0" layoutY="27.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="14.0" />
+</AnchorPane>

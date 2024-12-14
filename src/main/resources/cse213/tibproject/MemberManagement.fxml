@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="cse213.tibproject.controllers.MemberManagementController">
+    <children>
+        <Label layoutX="300" layoutY="20" text="Member Management" style="-fx-font-size: 20;"/>
+        
+        <!-- Member Table -->
+        <TableView fx:id="memberTable" layoutX="50" layoutY="60" prefHeight="200" prefWidth="700">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
+                <TableColumn fx:id="emailColumn" text="Email" prefWidth="200"/>
+                <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="150"/>
+                <TableColumn fx:id="statusColumn" text="Status" prefWidth="100"/>
+            </columns>
+        </TableView>
+        
+        <!-- Member Form -->
+        <VBox layoutX="50" layoutY="280" spacing="10">
+            <!-- Name Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Name:" prefWidth="60"/>
+                <TextField fx:id="nameField" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Email Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Email:" prefWidth="60"/>
+                <TextField fx:id="emailField" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Phone Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Phone:" prefWidth="60"/>
+                <TextField fx:id="phoneField" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Status Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Status:" prefWidth="60"/>
+                <ComboBox fx:id="statusComboBox" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Buttons -->
+            <HBox spacing="10" layoutY="20">
+                <Button text="Add Member" onAction="#addMember"/>
+                <Button text="Update Member" onAction="#updateMember"/>
+                <Button text="Delete Member" onAction="#deleteMember"/>
+                <Button text="Clear Form" onAction="#clearForm"/>
+            </HBox>
+        </VBox>
+        
+        <!-- Summary -->
+        <VBox layoutX="50" layoutY="450" spacing="10">
+            <Label fx:id="totalMembersLabel" text="Total Members: 0"/>
+            <Label fx:id="activeMembersLabel" text="Active Members: 0"/>
+            <Button text="Back to Dashboard" onAction="#backToDashboard"/>
+        </VBox>
+    </children>
+</AnchorPane> 

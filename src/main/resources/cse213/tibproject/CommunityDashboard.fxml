@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="cse213.tibproject.controllers.CommunityDashboardController">
+    <children>
+        <Label layoutX="250" layoutY="50" text="Community Dashboard" style="-fx-font-size: 20;"/>
+        <Label fx:id="welcomeLabel" layoutX="250" layoutY="100"/>
+        
+        <Button fx:id="enterButton" layoutX="250" layoutY="150" text="Enter Dashboard" onAction="#showDashboardContent"/>
+        <Button fx:id="logoutButton" layoutX="500" layoutY="50" text="Logout" onAction="#logout" visible="false"/>
+        
+        <VBox fx:id="dashboardContent" layoutX="50" layoutY="150" spacing="20" visible="false">
+            <Label text="Community Resources"/>
+            <Label text="1. Report Corruption"/>
+            <Label text="2. View Policies"/>
+            <Label text="3. Submit Feedback"/>
+            <Button text="Manage Member Registrations" onAction="#showMemberManagement"/>
+            <Button text="Manage Events" onAction="#showEventManagement"/>
+            <Button text="Organize Fundraising Campaigns" onAction="#showFundraisingManagement"/>
+        </VBox>
+    </children>
+</AnchorPane> 

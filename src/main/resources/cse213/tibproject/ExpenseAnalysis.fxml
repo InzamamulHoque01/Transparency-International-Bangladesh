@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="cse213.tibproject.controllers.ExpenseAnalysisController">
+    <children>
+        <Label layoutX="300" layoutY="20" text="Expense Analysis" style="-fx-font-size: 20;"/>
+        
+        <!-- Expense Table -->
+        <TableView fx:id="expenseTable" layoutX="50" layoutY="60" prefHeight="200" prefWidth="700">
+            <columns>
+                <TableColumn fx:id="expenseIdCol" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="expenseNameCol" text="Description" prefWidth="200"/>
+                <TableColumn fx:id="expenseAmountCol" text="Amount" prefWidth="100"/>
+                <TableColumn fx:id="expenseDateCol" text="Date" prefWidth="100"/>
+                <TableColumn fx:id="expenseCategoryCol" text="Category" prefWidth="100"/>
+            </columns>
+        </TableView>
+        
+        <!-- Add Expense Form -->
+        <VBox layoutX="50" layoutY="280" spacing="10">
+            <!-- Description Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Description:" prefWidth="80"/>
+                <TextField fx:id="expenseNameField" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Amount Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Amount:" prefWidth="80"/>
+                <TextField fx:id="expenseAmountField" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Date Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Date:" prefWidth="80"/>
+                <DatePicker fx:id="expenseDatePicker" prefWidth="200"/>
+            </HBox>
+            
+            <!-- Category Field -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Category:" prefWidth="80"/>
+                <ComboBox fx:id="categoryComboBox" prefWidth="200"/>
+            </HBox>
+            
+            <Button text="Add Expense" onAction="#addExpense"/>
+        </VBox>
+        
+        <!-- Chart -->
+        <PieChart fx:id="expenseChart" layoutX="400" layoutY="280" prefHeight="250" prefWidth="350"/>
+        
+        <!-- Summary -->
+        <VBox layoutX="50" layoutY="450" spacing="10">
+            <Label fx:id="totalExpensesLabel" text="Total Expenses: $0"/>
+            <Label fx:id="remainingBudgetLabel" text="Remaining Budget: $0"/>
+            <Button text="Back to Dashboard" onAction="#backToDashboard"/>
+        </VBox>
+    </children>
+</AnchorPane> 
