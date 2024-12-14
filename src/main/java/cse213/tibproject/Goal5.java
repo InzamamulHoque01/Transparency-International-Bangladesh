@@ -3,23 +3,21 @@ package cse213.tibproject;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 public class Goal5 {
 
     @FXML
-    private Button performanceRecordButton;
-
-    @FXML
     private ComboBox<String> recordComboBox;
 
-    @FXML
-    private Button submitButton;
 
-    @FXML
-    private Text recordText;
+
+;
 
     private Goal5Model model;
+    @FXML
+    private Label messageLabel;
 
     @FXML
     private void initialize() {
@@ -30,8 +28,8 @@ public class Goal5 {
         recordComboBox.getItems().addAll(model.getRecords());
 
         // Set up event handlers
-        performanceRecordButton.setOnAction(event -> performanceRecordButtonOnAction());
-        submitButton.setOnAction(event -> submitButtonOnAction());
+
+
     }
 
     @FXML
@@ -43,7 +41,7 @@ public class Goal5 {
 
         // Save the updated data to the binary file
         model.saveToFile("goal5data.bin");
-        recordText.setText("New record added: " + newRecord);
+messageLabel.setText("Success");
     }
 
     @FXML
@@ -51,9 +49,9 @@ public class Goal5 {
         // Display the selected record in the Text element
         String selectedRecord = recordComboBox.getValue();
         if (selectedRecord != null) {
-            recordText.setText("Selected Record: " + selectedRecord);
+            messageLabel.setText("Selected Record: " + selectedRecord);
         } else {
-            recordText.setText("No record selected.");
+            messageLabel.setText("No record selected.");
         }
     }
 }
